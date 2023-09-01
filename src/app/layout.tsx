@@ -1,5 +1,6 @@
+import '@/app/styles/globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 import type { Metadata } from 'next'
-import './globals.css'
 
 export const metadata: Metadata = {
 	title: 'Portfolio - Thomas Luizon',
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+					{children}
+				</ThemeProvider>
+			</body>
 		</html>
 	)
 }
