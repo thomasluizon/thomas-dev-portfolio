@@ -28,7 +28,7 @@ export default async function LocaleLayout({
 	return (
 		<html lang={locale}>
 			<body>
-				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="dark">
 					<NextIntlClientProvider locale={locale} messages={messages}>
 						<div className="flex h-full w-full">
 							<Sidebar />

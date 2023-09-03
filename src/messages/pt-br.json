@@ -9,5 +9,9 @@
 			"projects": "Meus projetos",
 			"contact": "Fale comigo!"
 		}
+	},
+	"imgAlt": {
+		"moon": "Um ícone da lua",
+		"sun": "Um ícone do sol"
 	}
 }

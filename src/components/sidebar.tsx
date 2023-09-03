@@ -14,7 +14,7 @@ export default function Sidebar() {
 			<nav>
 				<ul>
 					{sections.map(section => (
-						<NavItem section={section} />
+						<NavItem key={section} section={section} />
 					))}
 				</ul>
 			</nav>
