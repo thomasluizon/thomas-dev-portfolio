@@ -12,6 +12,8 @@
 	},
 	"imgAlt": {
 		"moon": "An icon of the moon",
-		"sun": "An icon of the sun"
+		"sun": "An icon of the sun",
+		"github": "An icon of GitHub",
+		"linkedin": "An icon of Linkedin"
 	}
 }

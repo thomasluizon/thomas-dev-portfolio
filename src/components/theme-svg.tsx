@@ -1,19 +1,24 @@
-import Image from 'next/image'
+import { useTheme } from 'next-themes'
+import Image, { StaticImageData } from 'next/image'
+import { ComponentProps } from 'react'
 
 type Props = {
-	isDarkTheme: boolean
-	src: string
+	src: string | StaticImageData
 	imgSize: number
 	alt: string
-}
+} & ComponentProps<typeof Image>
 
-export default function ThemeSvg({ isDarkTheme, src, imgSize, alt }: Props) {
+export default function ThemeSvg({ src, imgSize, alt, ...rest }: Props) {
+	const { theme } = useTheme()
+	const isLightTheme = theme === 'light'
+
 	return (
 		<Image
-			style={{ filter: isDarkTheme ? 'invert(100%)' : 'unset' }}
+			style={{ filter: !isLightTheme ? 'invert(100%)' : 'unset' }}
 			width={imgSize}
 			src={src}
 			alt={alt}
+			{...rest}
 		/>
 	)
 }

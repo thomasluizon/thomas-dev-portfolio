@@ -12,6 +12,8 @@
 	},
 	"imgAlt": {
 		"moon": "Um ícone da lua",
-		"sun": "Um ícone do sol"
+		"sun": "Um ícone do sol",
+		"github": "Um ícone do GitHub",
+		"linkedin": "Um ícone do Linkedin"
 	}
 }

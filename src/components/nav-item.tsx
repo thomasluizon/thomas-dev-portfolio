@@ -11,7 +11,7 @@ export default function NavItem({ section }: Props) {
 	return (
 		<li>
 			<Link
-				className="inline-block p-2 rounded-sm hover:bg-slate-700 w-full"
+				className="inline-block p-2 rounded-sm hover:bg-slate-700 transition-colors duration-300 w-full"
 				href={section === 'home' ? '/' : section}
 			>
 				{t(`sections.${section}`)}

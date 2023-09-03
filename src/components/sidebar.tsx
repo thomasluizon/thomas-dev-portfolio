@@ -1,8 +1,9 @@
 'use client'
 
 import NavItem from '@/components/nav-item'
+import Socials from '@/components/socials'
+import ThemeToggle from '@/components/theme-toggle'
 import { useTranslations } from 'next-intl'
-import ThemeToggle from './theme-toggle'
 
 export default function Sidebar() {
 	const t = useTranslations('sidebar')
@@ -19,7 +20,11 @@ export default function Sidebar() {
 					))}
 				</ul>
 			</nav>
-			<ThemeToggle />
+			<div className="flex flex-col gap-6 items-center">
+				<Socials />
+				<div>change language</div>
+				<ThemeToggle />
+			</div>
 		</aside>
 	)
 }

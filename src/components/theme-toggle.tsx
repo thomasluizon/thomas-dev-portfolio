@@ -18,19 +18,9 @@ export default function ThemeToggle() {
 
 	return (
 		<div className="flex items-center gap-2">
-			<ThemeSvg
-				isDarkTheme={!isLightTheme}
-				alt={t('moon')}
-				imgSize={imgSize}
-				src={moon}
-			/>
+			<ThemeSvg alt={t('moon')} imgSize={imgSize} src={moon} />
 			<Switch checked={isLightTheme} onCheckedChange={handleThemeToggle} />
-			<ThemeSvg
-				isDarkTheme={!isLightTheme}
-				alt={t('sun')}
-				imgSize={imgSize}
-				src={sun}
-			/>
+			<ThemeSvg alt={t('sun')} imgSize={imgSize} src={sun} />
 		</div>
 	)
 }
