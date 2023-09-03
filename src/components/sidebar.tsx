@@ -2,6 +2,7 @@
 
 import NavItem from '@/components/nav-item'
 import { useTranslations } from 'next-intl'
+import ThemeToggle from './theme-toggle'
 
 export default function Sidebar() {
 	const t = useTranslations('sidebar')
@@ -18,7 +19,7 @@ export default function Sidebar() {
 					))}
 				</ul>
 			</nav>
-			<div>socials</div>
+			<ThemeToggle />
 		</aside>
 	)
 }
