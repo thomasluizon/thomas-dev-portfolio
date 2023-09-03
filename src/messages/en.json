@@ -1,6 +1,13 @@
 {
-	"Index": {
-		"title": "My Portfolio!",
-		"sidebar": "Strawberry"
+	"index": {
+		"title": "My Portfolio!"
+	},
+	"sidebar": {
+		"title": "Portfolio",
+		"sections": {
+			"home": "Home",
+			"projects": "My projects",
+			"contact": "Contact me!"
+		}
 	}
 }

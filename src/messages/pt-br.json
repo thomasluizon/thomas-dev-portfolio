@@ -1,6 +1,13 @@
 {
-	"Index": {
-		"title": "Meu Portfolio!",
-		"sidebar": "MOrango"
+	"index": {
+		"title": "Meu Portfólio!"
+	},
+	"sidebar": {
+		"title": "Portfólio",
+		"sections": {
+			"home": "Início",
+			"projects": "Meus projetos",
+			"contact": "Fale comigo!"
+		}
 	}
 }

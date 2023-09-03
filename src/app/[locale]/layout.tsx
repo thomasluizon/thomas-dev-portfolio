@@ -30,9 +30,9 @@ export default async function LocaleLayout({
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 					<NextIntlClientProvider locale={locale} messages={messages}>
-						<div className="flex">
+						<div className="flex h-full w-full">
 							<Sidebar />
-							<main>{children}</main>
+							<main className="p-6">{children}</main>
 						</div>
 					</NextIntlClientProvider>
 				</ThemeProvider>
