@@ -1,4 +1,5 @@
 import '@/app/styles/globals.css'
+import Sidebar from '@/components/sidebar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
@@ -29,7 +30,10 @@ export default async function LocaleLayout({
 			<body>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 					<NextIntlClientProvider locale={locale} messages={messages}>
-						{children}
+						<div className="flex">
+							<Sidebar />
+							<main>{children}</main>
+						</div>
 					</NextIntlClientProvider>
 				</ThemeProvider>
 			</body>
