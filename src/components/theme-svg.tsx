@@ -1,4 +1,3 @@
-import { useTheme } from 'next-themes'
 import Image, { StaticImageData } from 'next/image'
 import { ComponentProps } from 'react'
 
@@ -6,15 +5,21 @@ type Props = {
 	src: string | StaticImageData
 	imgSize: number
 	alt: string
+	className?: string
 } & ComponentProps<typeof Image>
 
-export default function ThemeSvg({ src, imgSize, alt, ...rest }: Props) {
-	const { theme } = useTheme()
-	const isLightTheme = theme === 'light'
+export default function ThemeSvg({
+	src,
+	imgSize,
+	alt,
+	className,
+	...rest
+}: Props) {
+	const combinedClassName = `invert-theme ${className || ''}`.trim()
 
 	return (
 		<Image
-			style={{ filter: !isLightTheme ? 'invert(100%)' : 'unset' }}
+			className={combinedClassName}
 			width={imgSize}
 			src={src}
 			alt={alt}

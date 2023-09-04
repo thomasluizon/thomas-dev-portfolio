@@ -1,8 +1,8 @@
 import ThemeSvg from '@/components/theme-svg'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
-import GitHub from '/public/images/github-icon.png'
-import Linkedin from '/public/images/linkedin-icon.png'
+import GitHub from '/public/images/github-icon.svg'
+import Linkedin from '/public/images/linkedin-icon.svg'
 
 export default function Socials() {
 	const t = useTranslations('imgAlt')

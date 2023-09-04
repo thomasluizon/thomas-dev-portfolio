@@ -1,3 +1,5 @@
+'use client'
+
 import ThemeSvg from '@/components/theme-svg'
 import { Switch } from '@/components/ui/switch'
 import { useTranslations } from 'next-intl'
@@ -7,9 +9,9 @@ import sun from '/public/images/sun.svg'
 
 export default function ThemeToggle() {
 	const t = useTranslations('imgAlt')
-	const { setTheme, theme } = useTheme()
+	const { setTheme } = useTheme()
 
-	const isLightTheme = theme === 'light'
+	const isLightTheme = localStorage.getItem('theme') === 'light'
 	const imgSize = 30
 
 	const handleThemeToggle = () => {
