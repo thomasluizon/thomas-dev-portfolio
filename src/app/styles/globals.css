@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
 
 @layer base {
 	:root {
@@ -33,6 +45,7 @@
 		--ring: 222.2 84% 4.9%;
 
 		--radius: 0.5rem;
+		--invert: 0;
 	}
 
 	.dark {
@@ -63,6 +76,8 @@
 		--border: 217.2 32.6% 17.5%;
 		--input: 217.2 32.6% 17.5%;
 		--ring: 212.7 26.8% 83.9%;
+
+		--invert: 100;
 	}
 }
 

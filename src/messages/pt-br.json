@@ -1,0 +1,20 @@
+{
+	"index": {
+		"title": "Meu Portfólio!"
+	},
+	"sidebar": {
+		"title": "Portfólio",
+		"sections": {
+			"home": "Início",
+			"projects": "Projetos",
+			"contact": "Contato"
+		},
+		"language": "Idioma"
+	},
+	"imgAlt": {
+		"moon": "Um ícone da lua",
+		"sun": "Um ícone do sol",
+		"github": "Um ícone do GitHub",
+		"linkedin": "Um ícone do Linkedin"
+	}
+}
