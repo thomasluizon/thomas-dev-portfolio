@@ -11,7 +11,7 @@ export default function ThemeToggle() {
 	const t = useTranslations('imgAlt')
 	const { setTheme } = useTheme()
 
-	const isLightTheme = localStorage.getItem('theme') === 'light'
+	const isLightTheme = window.localStorage.getItem('theme') === 'light'
 	const imgSize = 30
 
 	const handleThemeToggle = () => {
