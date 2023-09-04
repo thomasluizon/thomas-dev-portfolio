@@ -4,6 +4,7 @@ import ThemeSvg from '@/components/theme-svg'
 import { Switch } from '@/components/ui/switch'
 import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
+import { useEffect } from 'react'
 import moon from '/public/images/moon.svg'
 import sun from '/public/images/sun.svg'
 
@@ -11,8 +12,12 @@ export default function ThemeToggle() {
 	const t = useTranslations('imgAlt')
 	const { setTheme } = useTheme()
 
-	const isLightTheme = window.localStorage.getItem('theme') === 'light'
+	let isLightTheme = false
 	const imgSize = 30
+
+	useEffect(() => {
+		isLightTheme = window.localStorage.getItem('theme') === 'light'
+	}, [])
 
 	const handleThemeToggle = () => {
 		setTheme(!isLightTheme ? 'light' : 'dark')
