@@ -9,9 +9,12 @@ import {
 } from '@/components/ui/popover'
 
 import { Button } from '@/components/ui/button'
+import hoverTheme from '@/utils/hover-theme'
 import { useTranslations } from 'next-intl'
+import { useTheme } from 'next-themes'
 
 export default function LanguageMenu() {
+	const { theme } = useTheme()
 	const t = useTranslations('sidebar')
 
 	const pathname = usePathname()
@@ -34,8 +37,12 @@ export default function LanguageMenu() {
 
 	return (
 		<Popover>
-			<PopoverTrigger>
-				<Button variant="ghost">{t('language.name')}</Button>
+			<PopoverTrigger
+				className={`rounded-sm p-2 w-full hover:${
+					hoverTheme[(theme as keyof typeof hoverTheme) || 'dark']
+				} transition-colors`}
+			>
+				{t('language.name')}
 			</PopoverTrigger>
 			<PopoverContent className="max-w-[150px]">
 				<ul className="flex flex-col gap-3 items-center">
