@@ -1,5 +1,6 @@
 'use client'
 
+import LanguageMenu from '@/components/language-menu'
 import NavItem from '@/components/nav-item'
 import Socials from '@/components/socials'
 import ThemeToggle from '@/components/theme-toggle'
@@ -22,7 +23,7 @@ export default function Sidebar() {
 			</nav>
 			<div className="flex flex-col gap-6 items-center">
 				<Socials />
-				<div>change language</div>
+				<LanguageMenu />
 				<ThemeToggle />
 			</div>
 		</aside>

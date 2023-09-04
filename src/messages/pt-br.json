@@ -8,6 +8,9 @@
 			"home": "Início",
 			"projects": "Meus projetos",
 			"contact": "Fale comigo!"
+		},
+		"language": {
+			"name": "Idioma"
 		}
 	},
 	"imgAlt": {

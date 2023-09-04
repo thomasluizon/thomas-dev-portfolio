@@ -23,7 +23,7 @@ export default function Socials() {
 	return (
 		<div className="flex items-center gap-3 justify-center">
 			{socials.map(social => (
-				<Link target="_blank" href={social.url}>
+				<Link target="_blank" href={social.url} key={social.url}>
 					<ThemeSvg
 						imgSize={30}
 						key={social.alt}
