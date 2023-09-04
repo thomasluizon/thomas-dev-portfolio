@@ -6,12 +6,10 @@
 		"title": "Portfólio",
 		"sections": {
 			"home": "Início",
-			"projects": "Meus projetos",
-			"contact": "Fale comigo!"
+			"projects": "Projetos",
+			"contact": "Contato"
 		},
-		"language": {
-			"name": "Idioma"
-		}
+		"language": "Idioma"
 	},
 	"imgAlt": {
 		"moon": "Um ícone da lua",

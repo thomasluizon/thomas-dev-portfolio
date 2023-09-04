@@ -37,7 +37,7 @@ export default function LanguageMenu() {
 			<PopoverTrigger
 				className={`rounded-sm p-2 w-full transition-colors hover:bg-secondary`}
 			>
-				{t('language.name')}
+				{t('language')}
 			</PopoverTrigger>
 			<PopoverContent className="max-w-[150px]">
 				<ul className="flex flex-col gap-3 items-center">

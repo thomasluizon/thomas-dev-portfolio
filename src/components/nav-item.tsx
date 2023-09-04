@@ -13,7 +13,7 @@ export default function NavItem({ section }: Props) {
 	return (
 		<li>
 			<Link
-				className={`inline-block p-2 text-sm rounded-sm hover:bg-secondary transition-colors duration-300 w-full`}
+				className={`inline-block p-2 rounded-sm hover:bg-secondary transition-colors duration-300 w-full text-center`}
 				href={section === 'home' ? '/' : section}
 			>
 				{t(`sections.${section}`)}
