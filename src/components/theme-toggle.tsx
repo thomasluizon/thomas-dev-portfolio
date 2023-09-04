@@ -8,6 +8,10 @@ import { useEffect } from 'react'
 import moon from '/public/images/moon.svg'
 import sun from '/public/images/sun.svg'
 
+function getTheme() {
+	return window.localStorage.getItem('theme') === 'light'
+}
+
 export default function ThemeToggle() {
 	const t = useTranslations('imgAlt')
 	const { setTheme } = useTheme()
@@ -16,10 +20,11 @@ export default function ThemeToggle() {
 	const imgSize = 30
 
 	useEffect(() => {
-		isLightTheme = window.localStorage.getItem('theme') === 'light'
+		isLightTheme = getTheme()
 	}, [])
 
 	const handleThemeToggle = () => {
+		isLightTheme = getTheme()
 		setTheme(!isLightTheme ? 'light' : 'dark')
 	}
 
